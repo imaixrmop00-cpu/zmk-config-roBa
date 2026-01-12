@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W         &kp E         &kp R      &kp T                                         &kp Y          &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F      &kp G      &kp LG(SEMI)        &lt 3 COLON    &kp H          &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &lt 2 TAB           &kp MINUS      &kp N          &kp M  &kp COMMA  &kp DOT  &kp RIGHT_CONTROL
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mkp LCLK  &mkp RCLK  &lt 1 CAPSLOCK      &kp BACKSPACE  &kp RIGHT_ALT                             &lt 5 ESC
+&lt 6 Q           &kp W         &kp E         &kp R      &kp T                                                   &mt RIGHT_SHIFT Y  &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F      &kp G      &kp LG(SEMI)        &lt 3 COLON              &kp H              &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &lt 2 TAB           &mt RIGHT_CONTROL MINUS  &kp N              &kp M  &kp COMMA  &kp DOT  &kp RIGHT_CONTROL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mkp LCLK  &mkp RCLK  &lt 1 CAPSLOCK      &kp BACKSPACE            &kp RIGHT_ALT                                 &lt 5 ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -100,10 +100,10 @@
 
         NUM {
             bindings = <
-&kp PRINTSCREEN  &kp ESCAPE  &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN                              &kp MINUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-&kp INSERT       &kp HOME    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END      &kp SLASH      &kp ASTERISK   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
-&kp SCROLLLOCK   &trans      &trans          &trans          &trans         &trans       &kp EQUAL      &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA
-&trans           &trans      &trans          &trans          &trans         &trans       &kp BACKSPACE  &kp RIGHT_ALT                                            &lt 5 CARET
+&kp PRINTSCREEN  &kp ESCAPE  &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN                                        &mt RIGHT_SHIFT MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+&kp INSERT       &kp HOME    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END      &kp SLASH                &kp ASTERISK           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
+&kp SCROLLLOCK   &trans      &trans          &trans          &trans         &trans       &mt RIGHT_CONTROL EQUAL  &kp NUMBER_0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA
+&trans           &trans      &trans          &trans          &trans         &trans       &kp BACKSPACE            &kp RIGHT_ALT                                                    &lt 5 CARET
             >;
         };
 
