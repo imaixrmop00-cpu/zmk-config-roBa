@@ -91,10 +91,10 @@
 
         FUNCTION {
             bindings = <
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17                        &kp F1         &kp F2   &kp F3   &trans  &trans
-&kp F18  &kp F19  &kp F20  &kp F21  &kp F22  &kp F23      &kp F4   &kp F5         &kp F6   &kp F7   &trans  &trans
-&trans   &trans   &trans   &trans   &trans   &kp F24      &kp F8   &kp F9         &kp F10  &kp F11  &trans  &trans
-&trans   &trans   &trans   &trans   &trans   &trans       &kp F12  &kp RIGHT_ALT                            &lt 5 ESCAPE
+&kp F13  &kp F14            &kp F15               &kp F16  &kp F17                        &kp F1         &kp F2   &kp F3   &trans  &trans
+&kp F18  &kp F19            &kp F20               &kp F21  &kp F22  &kp F23      &kp F4   &kp F5         &kp F6   &kp F7   &trans  &trans
+&trans   &kp K_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans   &trans   &kp F24      &kp F8   &kp F9         &kp F10  &kp F11  &trans  &trans
+&trans   &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans   &trans   &trans       &kp F12  &kp RIGHT_ALT                            &lt 5 ESCAPE
             >;
         };
 
@@ -103,16 +103,16 @@
 &kp PRINTSCREEN  &trans          &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN                                          &mt RIGHT_SHIFT MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
 &kp INSERT       &kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END        &mt RIGHT_WIN SLASH      &kp ASTERISK           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
 &trans           &trans          &trans          &trans          &trans         &trans         &mt RIGHT_CONTROL EQUAL  &kp NUMBER_0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA
-&kp ESCAPE       &kp SCROLLLOCK  &trans          &trans          &trans         &kp ENTER      &kp BACKSPACE            &kp RIGHT_ALT                                                    &lt 5 ESCAPE
+&kp ESCAPE       &kp SCROLLLOCK  &trans          &kp DELETE      &kp CAPSLOCK   &kp ENTER      &kp BACKSPACE            &kp RIGHT_ALT                                                    &lt 5 ESCAPE
             >;
         };
 
         ARROW {
             bindings = <
-&trans  &kp LC(LS(LEFT_BRACKET))  &kp RIGHT_BRACKET  &kp LC(PIPE)  &kp AT                                 &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp DOLLAR    &kp PERCENT
-&trans  &trans                    &trans             &trans        &trans  &trans         &kp AMPERSAND   &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE     &kp BACKSLASH
-&trans  &trans                    &trans             &trans        &trans  &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp UNDER
-&trans  &trans                    &trans             &trans        &trans  &kp ENTER      &kp BACKSPACE   &kp RIGHT_ALT                                                                &lt 5 ESCAPE
+&trans  &kp LC(LS(LEFT_BRACKET))  &kp RIGHT_BRACKET  &kp LC(PIPE)  &kp AT                                   &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp DOLLAR    &kp PERCENT
+&trans  &trans                    &trans             &trans        &trans    &trans         &kp AMPERSAND   &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE     &kp BACKSLASH
+&trans  &trans                    &trans             &trans        &trans    &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp UNDER
+&trans  &trans                    &trans             &kp DELETE    &kp CAPS  &kp ENTER      &kp BACKSPACE   &kp RIGHT_ALT                                                                &lt 5 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -120,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans         &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans      &trans         &trans         &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &kp DELETE  &kp ENTER      &kp BACKSPACE  &trans                                &trans
+&trans  &trans  &trans  &trans      &trans                                  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans      &trans    &trans         &trans         &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans      &trans    &trans         &trans         &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &kp DELETE  &kp CAPS  &kp ENTER      &kp BACKSPACE  &trans                                &trans
             >;
         };
 
