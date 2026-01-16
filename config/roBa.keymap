@@ -100,10 +100,10 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &trans      &trans                                      &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
-&trans  &trans  &trans  &trans      &trans        &kp ENTER      &trans         &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &trans  &kp ENTER
-&trans  &trans  &trans  &trans      &trans        &trans         &kp NUMBER_0   &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &trans  &kp RIGHT_CONTROL
-&trans  &trans  &trans  &kp DELETE  &kp CAPSLOCK  &kp SPACE      &kp BACKSPACE  &kp RIGHT_ALT                                      &lt 5 ESCAPE
+&trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                                       &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans         &kp ENTER             &trans         &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &trans  &kp ENTER
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &kp LEFT_CONTROL      &kp NUMBER_0   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &trans  &kp RIGHT_CONTROL
+&trans        &trans        &trans        &kp DELETE    &kp CAPSLOCK   &kp SPACE             &kp BACKSPACE  &kp RIGHT_SHIFT                                      &lt 5 ESCAPE
             >;
         };
 
