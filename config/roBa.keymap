@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &lt 5 W       &kp E         &kp R      &kp T                                                &mt RIGHT_SHIFT Y  &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F      &kp G      &lt 3 SEMI       &mt RIGHT_WIN COLON      &kp H              &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &lt 2 TAB        &mt RIGHT_CONTROL MINUS  &kp N              &kp M  &kp COMMA  &kp DOT  &kp RIGHT_CONTROL
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mkp LCLK  &mkp RCLK  &lt 1 ENTER      &kp BACKSPACE            &kp RIGHT_ALT                                 &lt 5 ESCAPE
+&lt 6 Q           &lt 5 W       &kp E         &kp R       &kp T                                               &mt RIGHT_SHIFT Y  &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F       &kp G     &lt 3 SEMI       &mt RIGHT_WIN COLON      &kp H              &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V       &kp B     &lt 2 TAB        &mt RIGHT_CONTROL MINUS  &kp N              &kp M  &kp COMMA  &kp DOT  &kp RIGHT_CONTROL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp CAPS  &lt 1 ENTER      &kp BACKSPACE            &kp RIGHT_ALT                                 &lt 5 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -100,10 +100,10 @@
 
         NUM {
             bindings = <
-&kp PRINTSCREEN  &trans          &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN                                             &mt RIGHT_SHIFT MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-&kp INSERT       &kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END        &mt RIGHT_WIN SLASH         &kp ASTRK              &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD
-&trans           &trans          &trans          &trans          &trans         &trans         &mt RIGHT_CONTROL KP_EQUAL  &kp NUMBER_0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA
-&kp ESCAPE       &kp SCROLLLOCK  &trans          &kp DELETE      &kp CAPSLOCK   &kp SPACE      &kp BACKSPACE               &kp RIGHT_ALT                                                    &lt 5 ESCAPE
+&kp PRINTSCREEN  &trans          &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN                                &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&kp INSERT       &kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END        &trans         &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &trans  &kp ENTER
+&trans           &trans          &trans          &trans          &trans         &trans         &kp NUMBER_0   &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &trans  &kp RIGHT_CONTROL
+&kp ESCAPE       &kp SCROLLLOCK  &trans          &kp DELETE      &kp CAPSLOCK   &kp SPACE      &kp BACKSPACE  &kp RIGHT_ALT                                      &lt 5 ESCAPE
             >;
         };
 
@@ -120,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans    &trans     &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans     &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4  &mkp LCLK  &mkp RCLK  &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                    &trans
             >;
         };
 
@@ -142,6 +142,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
