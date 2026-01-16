@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &lt 5 W       &kp E         &kp R       &kp T                                               &mt RIGHT_SHIFT Y  &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F       &kp G     &lt 3 SEMI       &mt RIGHT_WIN COLON      &kp H              &lt 1 J  &lt 2 K    &lt 3 L  &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V       &kp B     &lt 2 TAB        &mt RIGHT_CONTROL MINUS  &kp N              &kp M    &kp COMMA  &kp DOT  &kp RIGHT_CONTROL
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp CAPS  &lt 1 ENTER      &kp BACKSPACE            &kp RIGHT_ALT                                   &lt 5 ESCAPE
+&lt 6 Q           &kp W         &kp E         &kp R       &kp T                                                 &mt RIGHT_SHIFT Y  &kp U    &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F       &kp G       &lt 3 SEMI       &mt RIGHT_WIN COLON      &kp H              &lt 1 J  &lt 2 K    &lt 3 L  &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V       &kp B       &lt 2 TAB        &mt RIGHT_CONTROL MINUS  &kp N              &kp M    &kp COMMA  &kp DOT  &kp RIGHT_CONTROL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 5 CAPS  &lt 1 ENTER      &kp BACKSPACE            &kp RIGHT_ALT                                   &lt 5 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -103,7 +103,7 @@
 &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                                       &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
 &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans         &kp ENTER             &trans         &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &trans  &kp ENTER
 &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &kp LEFT_CONTROL      &kp NUMBER_0   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &trans  &kp RIGHT_CONTROL
-&trans        &trans        &trans        &kp DELETE    &kp CAPSLOCK   &kp SPACE             &kp BACKSPACE  &kp RIGHT_SHIFT                                      &lt 5 ESCAPE
+&trans        &kp COMMA     &kp PERIOD    &kp DELETE    &kp CAPSLOCK   &kp SPACE             &kp BACKSPACE  &kp RIGHT_SHIFT                                      &lt 5 ESCAPE
             >;
         };
 
