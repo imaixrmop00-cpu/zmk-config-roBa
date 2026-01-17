@@ -94,7 +94,7 @@
 &kp F13  &kp F14            &kp F15               &kp F16  &kp F17                                 &kp F1  &kp F2   &kp F3   &trans  &trans
 &kp F18  &kp F19            &kp F20               &kp F21  &kp F22  &kp F23      &kp F4            &kp F5  &kp F6   &kp F7   &trans  &trans
 &trans   &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans   &trans   &kp F24      &mt RIGHT_ALT F8  &kp F9  &kp F10  &kp F11  &trans  &trans
-&trans   &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans   &trans   &trans       &kp F12           &trans                            &lt 5 ESCAPE
+&to 0    &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans   &trans   &trans       &kp F12           &trans                            &lt 5 ESCAPE
             >;
         };
 
@@ -103,7 +103,7 @@
 &trans     &kp HOME         &kp LEFT_ARROW  &kp RIGHT   &kp END                                                              &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0  &kp TAB
 &kp MINUS  &kp KP_PLUS      &kp SEMICOLON   &kp COMMA   &kp PG_UP      &kp UP                    &mt RIGHT_CONTROL NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &mt RIGHT_SHIFT ENTER
 &kp SLASH  &kp KP_ASTERISK  &kp COLON       &kp PERIOD  &kp PAGE_DOWN  &kp DOWN_ARROW            &mt RIGHT_ALT NUMBER_0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &mt LEFT_WIN RIGHT_CONTROL
-&trans     &trans           &trans          &kp DELETE  &trans         &mt LEFT_SHIFT ENTER      &kp BACKSPACE               &kp DELETE                                        &lt 5 ESCAPE
+&to 0      &trans           &trans          &kp DELETE  &trans         &mt LEFT_SHIFT ENTER      &kp BACKSPACE               &kp DELETE                                        &lt 5 ESCAPE
             >;
         };
 
@@ -112,7 +112,7 @@
 &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RS(PIPE)  &kp AT                                 &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp DOLLAR    &kp PERCENT
 &trans  &trans            &trans             &trans        &trans  &trans         &kp AMPERSAND   &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE     &kp BACKSLASH
 &trans  &trans            &trans             &trans        &trans  &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp UNDER
-&trans  &trans            &trans             &kp DELETE    &trans  &kp SPACE      &kp BACKSPACE   &trans                                                                       &lt 5 ESCAPE
+&to 0   &trans            &trans             &kp DELETE    &trans  &kp SPACE      &kp BACKSPACE   &trans                                                                       &lt 5 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -123,7 +123,7 @@
 &trans  &trans    &trans    &trans  &trans                      &trans  &trans     &trans     &trans  &trans
 &trans  &trans    &trans    &trans  &trans  &trans      &trans  &trans  &trans     &trans     &trans  &trans
 &trans  &trans    &trans    &trans  &trans  &trans      &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans
-&trans  &mkp MB4  &mkp MB5  &trans  &trans  &trans      &trans  &trans                                &trans
+&to 0   &mkp MB4  &mkp MB5  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
@@ -141,7 +141,7 @@
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&to 0   &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
