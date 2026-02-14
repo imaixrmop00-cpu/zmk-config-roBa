@@ -1,0 +1,26 @@
+/ {
+    // トラックボール入力にジェスチャーを追加
+    trackball: trackball {
+        input-processors = <&zip_mouse_gesture>;
+    };
+
+    // ジェスチャーのパターン定義
+    zip_mouse_gesture: zip_mouse_gesture {
+        stroke-size = <300>;           // 1ストロークの最小距離
+        enable-eager-mode;             // 途中で判定
+
+        history_back {
+            pattern = <GESTURE_RIGHT>;    // → スワイプ
+            bindings = <&kp LA(LEFT)>;    // Alt+Left (ブラウザ戻る)
+        };
+        history_forward {
+            pattern = <GESTURE_LEFT>;     // ← スワイプ
+            bindings = <&kp LA(RIGHT)>;   // Alt+Right (ブラウザ進む)
+        };
+        close_tab {
+            pattern = <GESTURE_DOWN GESTURE_RIGHT>; // ↓→
+            bindings = <&kp LC(W)>;                // Ctrl+W (タブ閉じる)
+        };
+    };
+};
+    
