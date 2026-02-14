@@ -83,7 +83,7 @@
             bindings = <
 &lt 6 Q    &kp W             &kp E       &kp R       &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
 &kp A      &kp S             &kp D       &kp F       &kp G      &lt 1 SPACE      &lt 1 EQUAL          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
-&kp Z      &mt LEFT_SHIFT X  &kp C       &kp V       &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
+&kp Z      &mt LEFT_SHIFT X  &kp C       &kp V       &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mouse_gesture_mkp 0 RCLK          &kp LEFT_WIN
 &kp LCTRL  &kp LEFT_WIN      &kp DELETE  &lt 5 CAPS  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
             >;
 
