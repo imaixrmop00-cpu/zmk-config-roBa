@@ -18,8 +18,8 @@ manifest:
       revision: main
 
     - name: zmk-mouse-gesture
-      remote: kot149
-      revision: main   # または v1 があればそれ
+      url: https://github.com/ZIPLAB/zmk-mouse-gesture
+      revision: main
 
   self:
     path: config
