@@ -4,6 +4,8 @@
 
 / {
     zip_mouse_gesture: zip_mouse_gesture {
+        compatible = "zmk,input-processor-mouse-gesture";
+
         stroke-size = <300>;
         enable-eager-mode;
 
