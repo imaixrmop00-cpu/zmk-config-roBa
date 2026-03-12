@@ -17,7 +17,7 @@ manifest:
 
     - name: zmk-mouse-gesture
       url: https://github.com/ZIPLAB/zmk-mouse-gesture
-      revision: main
+      revision: v0.3-branch
 
   self:
     path: config
