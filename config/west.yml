@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
-    - name: kot149
-      url-base: https://github.com/kot149
 
   projects:
     - name: zmk
