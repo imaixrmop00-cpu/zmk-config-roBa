@@ -1,30 +1,30 @@
-/ {
-    // トラックボール入力にジェスチャーを追加
-    trackball: trackball {
-        input-processors = <&zip_mouse_gesture>;
-    };
+&trackball {
+    input-processors = <&zip_mouse_gesture>;
+};
 
-    // ジェスチャーのパターン定義
+/ {
     zip_mouse_gesture: zip_mouse_gesture {
-        stroke-size = <300>;           // 1ストロークの最小距離
-        enable-eager-mode;             // 途中で判定
+        stroke-size = <300>;
+        enable-eager-mode;
 
         history_back {
-            pattern = <GESTURE_LEFT>;    // ← スワイプ
-            bindings = <&kp LA(LEFT)>;    // Alt+Left (ブラウザ戻る)
+            pattern = <GESTURE_LEFT>;
+            bindings = <&kp LA(LEFT)>;
         };
+
         history_forward {
-            pattern = <GESTURE_RIGHT>;     // → スワイプ
-            bindings = <&kp LA(RIGHT)>;   // Alt+Right (ブラウザ進む)
+            pattern = <GESTURE_RIGHT>;
+            bindings = <&kp LA(RIGHT)>;
         };
+
         task_view {
             pattern = <GESTURE_UP>;
             bindings = <&kp LG(TAB)>;
         };
+
         close_tab {
-            pattern = <GESTURE_DOWN GESTURE_RIGHT>; // ↓→
-            bindings = <&kp LC(W)>;                // Ctrl+W (タブ閉じる)
+            pattern = <GESTURE_DOWN GESTURE_RIGHT>;
+            bindings = <&kp LC(W)>;
         };
     };
 };
-    
