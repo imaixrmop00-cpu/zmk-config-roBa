@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
-    - name: ziplab
-      url-base: https://github.com/ZIPLAB
 
   projects:
     - name: zmk
@@ -18,7 +16,7 @@ manifest:
       revision: main
 
     - name: zmk-mouse-gestures
-      remote: ziplab
+      url: https://github.com/ZIPLAB/zmk-mouse-gestures
       revision: main
 
   self:
