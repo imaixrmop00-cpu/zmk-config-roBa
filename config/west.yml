@@ -17,7 +17,7 @@ manifest:
       remote: kumamuk-git
       revision: main
 
-    - name: zmk-mouse-gesture
+    - name: zmk-mouse-gestures
       remote: ziplab
       revision: main
 
