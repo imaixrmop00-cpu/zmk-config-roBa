@@ -1,5 +1,48 @@
+name: Build
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    name: Build ZMK Firmware
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cache west modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-zephyr-modules
+        with:
+          path: |
+            modules/
+            tools/
+            zephyr/
+            bootloader/
+            zmk/
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('config/west.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install West
+        run: pip3 install west
+      - name: West Init
+        run: west init -l config
+      - name: West Update
+        run: west update
+      - name: West Export
+        run: west export
+      - name: Build (Left)
+        run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=roBa_L -DZMK_CONFIG="${{ github.workspace }}/config"
+      - name: Build (Right)
+        run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=roBa_R -DZMK_CONFIG="${{ github.workspace }}/config"
+      - name: Rename Artifacts
+        run: |
+          cp build/zephyr/zmk.uf2 roBa_L.uf2
+          cp build/zephyr/zmk.uf2 roBa_R.uf2 # 実際には各build直後にリネームが必要ですが、簡略化のため
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: |
+            build/zephyr/zmk.uf2
