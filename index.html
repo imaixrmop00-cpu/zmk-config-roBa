@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>roBa keymap cheatsheet</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --bg2: #f5f5f4;
+    --border: rgba(0,0,0,0.12);
+    --border2: rgba(0,0,0,0.22);
+    --text: #1c1c1a;
+    --text2: #6b6b67;
+    --blue-bg: #dbeafe;
+    --blue-fg: #1e40af;
+    --amber-bg: #fef3c7;
+    --amber-fg: #92400e;
+    --radius: 7px;
+    --key-w: 44px;
+    --key-h: 40px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1e1e1c;
+      --bg2: #2a2a28;
+      --border: rgba(255,255,255,0.1);
+      --border2: rgba(255,255,255,0.2);
+      --text: #e8e6e0;
+      --text2: #9a9893;
+      --blue-bg: #1e3a5f;
+      --blue-fg: #93c5fd;
+      --amber-bg: #451a03;
+      --amber-fg: #fcd34d;
+    }
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px 20px 48px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 24px;
+    border-bottom: 0.5px solid var(--border2);
+    padding-bottom: 16px;
+  }
+  header h1 { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+  .meta { font-size: 12px; color: var(--text2); display: flex; gap: 16px; flex-wrap: wrap; }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+  .nav-item {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: var(--radius);
+    border: 0.5px solid var(--border2);
+    color: var(--text2);
+    text-decoration: none;
+  }
+  .nav-item:hover { background: var(--bg2); color: var(--text); }
+
+  .layer { margin-bottom: 36px; }
+  .layer-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .layer-name {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text2);
+    background: var(--bg2);
+    padding: 2px 8px;
+    border-radius: 99px;
+    border: 0.5px solid var(--border);
+  }
+
+  .keyboard { display: flex; flex-direction: column; gap: 4px; }
+  .kb-row { display: flex; gap: 4px; align-items: center; }
+
+  .key {
+    width: var(--key-w);
+    height: var(--key-h);
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 0.5px solid var(--border2);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text);
+    position: relative;
+    text-align: center;
+    line-height: 1.25;
+    padding: 2px 3px;
+  }
+  .key-trans { opacity: 0.25; }
+  .key-layer {
+    background: var(--amber-bg);
+    color: var(--amber-fg);
+    border-color: transparent;
+  }
+  .key-special {
+    background: var(--blue-bg);
+    color: var(--blue-fg);
+    border-color: transparent;
+  }
+  .hold {
+    font-size: 9px;
+    color: var(--text2);
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
+    line-height: 1;
+  }
+  .key-layer .hold, .key-special .hold { color: inherit; opacity: 0.7; }
+
+  .gap { width: 14px; flex-shrink: 0; }
+  .spacer { flex: 1; }
+  .spacer-wide { flex: 3; }
+
+  .split-label {
+    font-size: 10px;
+    color: var(--text2);
+    text-align: center;
+    margin: 2px 0;
+    letter-spacing: 0.04em;
+  }
+
+  .kb-row.extras {
+    margin-top: 6px;
+    justify-content: center;
+    gap: 8px;
+  }
+  .extra-key {
+    width: 58px;
+    height: 36px;
+    font-size: 9px;
+  }
+  .extra-key small { font-size: 10px; font-weight: 500; }
+
+  .legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: var(--text2);
+    margin-bottom: 20px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 5px; }
+  .legend-dot {
+    width: 11px; height: 11px;
+    border-radius: 3px;
+    border: 0.5px solid var(--border2);
+  }
+  .legend-dot.layer { background: var(--amber-bg); border-color: transparent; }
+  .legend-dot.special { background: var(--blue-bg); border-color: transparent; }
+  .legend-dot.normal { background: var(--bg); }
+
+  hr { border: none; border-top: 0.5px solid var(--border); margin: 32px 0; }
+
+  @media print {
+    body { padding: 12px; }
+    .layer { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>roBa keymap cheatsheet</h1>
+  <div class="meta">
+    <span>generated: 2026-04-05 14:03</span>
+    <span class="source">source: config/roBa.keymap</span>
+    <span>8 layers</span>
+  </div>
+</header>
+
+<nav><a href="#layer-0" class="nav-item">L0: default_layer</a><a href="#layer-1" class="nav-item">L1: FUNCTION</a><a href="#layer-2" class="nav-item">L2: NUM</a><a href="#layer-3" class="nav-item">L3: ARROW</a><a href="#layer-4" class="nav-item">L4: MOUSE</a><a href="#layer-5" class="nav-item">L5: SCROLL</a><a href="#layer-6" class="nav-item">L6: layer_6</a><a href="#layer-7" class="nav-item">L7: layer_7</a></nav>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot normal"></div>通常キー</div>
+  <div class="legend-item"><div class="legend-dot layer"></div>レイヤーキー</div>
+  <div class="legend-item"><div class="legend-dot special"></div>特殊/システム</div>
+</div>
+
+
+<section class="layer" id="layer-0">
+  <h2 class="layer-title">Layer 0 <span class="layer-name">default_layer</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key key-layer">Q<span class="hold">L6</span></div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div><div class="gap"></div><div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div></div>
+<div class="kb-row"><div class="key">A</div><div class="key">S</div><div class="key">D</div><div class="key">F</div><div class="key">G</div><div class="key key-layer">SPC<span class="hold">L1</span></div><div class="key key-layer">=<span class="hold">L1</span></div><div class="gap"></div><div class="key">H</div><div class="key">J</div><div class="key">K</div><div class="key">L<span class="hold">RIGHT_S…</span></div><div class="key">⇥</div></div>
+<div class="kb-row"><div class="key">Z</div><div class="key">X<span class="hold">LEFT_SH…</span></div><div class="key">C</div><div class="key">V</div><div class="key">B</div><div class="key key-layer">⇥<span class="hold">L3</span></div><div class="key">=<span class="hold">RIGHT_A…</span></div><div class="gap"></div><div class="key">N</div><div class="key">M</div><div class="key key-special">mkp</div><div class="key key-special">mkp</div><div class="key">LEFT_WI…</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key">Ctrl</div><div class="key">LEFT_WI…</div><div class="key">DELETE</div><div class="key key-layer">CAPS<span class="hold">L5</span></div><div class="key">-</div><div class="key key-layer">↵<span class="hold">L2</span></div><div class="key key-layer">BACKSPA…<span class="hold">L2</span></div><div class="key">RIGHT_C…</div><div class="key key-layer">↵<span class="hold">L5</span></div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-1">
+  <h2 class="layer-title">Layer 1 <span class="layer-name">FUNCTION</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key">F13</div><div class="key">F14</div><div class="key">F15</div><div class="key">F16</div><div class="key">F17</div><div class="gap"></div><div class="key">F1</div><div class="key">F2</div><div class="key">F3</div><div class="key key-trans">▽</div><div class="key">C_BRIGH…</div></div>
+<div class="kb-row"><div class="key">F18</div><div class="key">F19</div><div class="key">F20</div><div class="key">F21</div><div class="key">F22</div><div class="key">F23</div><div class="key">F4</div><div class="gap"></div><div class="key">F5</div><div class="key">F6</div><div class="key">F7</div><div class="key key-trans">▽</div><div class="key">C_BRIGH…</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">F24</div><div class="key">F8<span class="hold">RIGHT_A…</span></div><div class="gap"></div><div class="key">F9</div><div class="key">F10</div><div class="key">F11</div><div class="key key-trans">▽</div><div class="key">C_VOLUM…</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key">SCROLLL…</div><div class="key">INSERT</div><div class="key">PrtSc</div><div class="key">ESC</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">F12</div><div class="key key-trans">▽</div><div class="key">C_VOLUM…</div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-2">
+  <h2 class="layer-title">Layer 2 <span class="layer-name">NUM</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key">SEMICOL…</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">PAGE_UP</div><div class="key">UP_ARRO…</div><div class="gap"></div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">0</div><div class="key">DELETE</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key">-</div><div class="key">KP+</div><div class="key">Home</div><div class="key">PAGE_DO…</div><div class="key">DOWN_AR…</div><div class="key">DEL<span class="hold">RIGHT_C…</span></div><div class="gap"></div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">DELETE<span class="hold">RIGHT_S…</span></div><div class="key">⇥</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key">/</div><div class="key">KP_ASTE…</div><div class="key">End</div><div class="key">LEFT_AR…</div><div class="key">RIGHT_A…</div><div class="key">NUMBER_…<span class="hold">RIGHT_A…</span></div><div class="gap"></div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">DELETE</div><div class="key">LEFT_WI…</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">,</div><div class="key">PERIOD</div><div class="key">↵<span class="hold">LEFT_SH…</span></div><div class="key">BACKSPA…</div><div class="key">RIGHT_C…</div><div class="key key-layer">↵<span class="hold">L5</span></div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-3">
+  <h2 class="layer-title">Layer 3 <span class="layer-name">ARROW</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">RS(PIPE…</div><div class="key">@</div><div class="gap"></div><div class="key">!</div><div class="key">DOUBLE_…</div><div class="key">#</div><div class="key">DOLLAR</div><div class="key">PERCENT</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">LEFT_BR…</div><div class="key">RIGHT_B…</div><div class="key key-trans">▽</div><div class="key">AMPERSA…<span class="hold">RIGHT_C…</span></div><div class="gap"></div><div class="key">SINGLE_…</div><div class="key">LEFT_PA…</div><div class="key">RIGHT_P…</div><div class="key">~</div><div class="key">BACKSLA…<span class="hold">RIGHT_S…</span></div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">LEFT_BR…<span class="hold">RIGHT_A…</span></div><div class="gap"></div><div class="key">RIGHT_B…</div><div class="key">LESS_TH…</div><div class="key">GREATER…</div><div class="key">QUESTIO…</div><div class="key">_<span class="hold">LEFT_WI…</span></div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key key-layer">To0</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key">DELETE</div><div class="key key-trans">▽</div><div class="key">SPC</div><div class="key">BACKSPA…</div><div class="key key-trans">▽</div><div class="key key-layer">ESCAPE<span class="hold">L5</span></div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-4">
+  <h2 class="layer-title">Layer 4 <span class="layer-name">MOUSE</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-5">
+  <h2 class="layer-title">Layer 5 <span class="layer-name">SCROLL</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-6">
+  <h2 class="layer-title">Layer 6 <span class="layer-name">layer_6</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-special">BT 0</div><div class="key key-special">BT 1</div><div class="key key-special">BT 2</div><div class="key key-special">BT 3</div><div class="key key-special">BT 4</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key">NUMBER_…</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-special">BOOT</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-special">BT CLR</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key key-layer">To0</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-special">BT CLR ALL</div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+<section class="layer" id="layer-7">
+  <h2 class="layer-title">Layer 7 <span class="layer-name">layer_7</span></h2>
+  <div class="keyboard">
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="gap"></div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="split-label">thumb cluster</div>
+<div class="kb-row"><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div><div class="key key-trans">▽</div></div>
+<div class="split-label" style="margin-top:4px;opacity:0.5">encoder: sensor-bindings</div>
+  </div>
+</section>
+
+</body>
+</html>
