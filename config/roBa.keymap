@@ -29,29 +29,9 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
         };
     };
 
@@ -80,10 +60,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q    &kp W             &kp E       &kp R       &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
-&kp A      &kp S             &kp D       &kp F       &kp G      &lt 1 SPACE      &lt 1 EQUAL          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
-&kp Z      &mt LEFT_SHIFT X  &kp C       &kp V       &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
-&kp LCTRL  &kp LEFT_WIN      &kp DELETE  &lt 5 CAPS  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
+&lt 6 Q    &kp W             &kp E       &kp R         &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
+&kp A      &kp S             &kp D       &kp F         &kp G      &lt 1 SPACE      &lt 1 EQUAL          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
+&kp Z      &mt LEFT_SHIFT X  &kp C       &kp V         &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
+&kp LCTRL  &kp LEFT_WIN      &kp DELETE  &kp CAPSLOCK  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -91,28 +71,28 @@
 
         FUNCTION {
             bindings = <
-&kp F13         &kp F14     &kp F15          &kp F16  &kp F17                                 &kp F1  &kp F2   &kp F3   &trans  &kp C_BRIGHTNESS_INC
-&kp F18         &kp F19     &kp F20          &kp F21  &kp F22  &kp F23      &kp F4            &kp F5  &kp F6   &kp F7   &trans  &kp C_BRIGHTNESS_DEC
-&trans          &trans      &trans           &trans   &trans   &kp F24      &mt RIGHT_ALT F8  &kp F9  &kp F10  &kp F11  &trans  &kp C_VOLUME_UP
-&kp SCROLLLOCK  &kp INSERT  &kp PRINTSCREEN  &kp ESC  &trans   &trans       &kp F12           &trans                            &kp C_VOLUME_DOWN
+&kp F13         &kp F14         &kp F15          &kp F16         &kp F17                                               &kp F1           &kp F2   &kp F3   &kp RIGHT_SHIFT  &kp C_BRIGHTNESS_INC
+&kp F18         &kp F19         &kp F20          &kp F21         &kp F22         &kp F23             &kp F4            &kp F5           &kp F6   &kp F7   &kp RIGHT_SHIFT  &kp C_BRIGHTNESS_DEC
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp F24             &mt RIGHT_ALT F8  &kp F9           &kp F10  &kp F11  &kp RIGHT_SHIFT  &kp C_VOLUME_UP
+&kp SCROLLLOCK  &kp INSERT      &kp PRINTSCREEN  &kp ESC         &kp LEFT_SHIFT  &kp LEFT_SHIFT      &kp F12           &kp RIGHT_SHIFT                                     &kp C_VOLUME_DOWN
             >;
         };
 
         NUM {
             bindings = <
-&kp SEMICOLON  &trans     &trans           &kp PAGE_UP  &kp UP_ARROW                                                      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0                  &kp DELETE
-&trans         &kp MINUS  &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW            &mt RIGHT_CONTROL DEL   &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &mt RIGHT_SHIFT DELETE  &kp TAB
-&trans         &kp SLASH  &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW           &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp DELETE              &kp LEFT_WIN
-&trans         &trans     &trans           &kp COMMA    &kp PERIOD      &mt LEFT_SHIFT ENTER      &kp BACKSPACE           &kp RIGHT_CONTROL                                                      &lt 5 ENTER
+&kp SEMICOLON   &kp COMMA        &kp PERIOD       &kp PAGE_UP  &kp UP_ARROW                                                      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0           &kp RIGHT_SHIFT
+&kp A           &kp MINUS        &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW            &kp N0                  &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_SHIFT  &kp TAB
+&kp LEFT_SHIFT  &kp SLASH        &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW           &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_SHIFT  &kp LEFT_WIN
+&kp LEFT_SHIFT  &kp RIGHT_SHIFT  &kp RIGHT_SHIFT  &kp COMMA    &kp PERIOD      &mt LEFT_SHIFT ENTER      &kp BACKSPACE           &kp RIGHT_CONTROL                                               &lt 5 ENTER
             >;
         };
 
         ARROW {
             bindings = <
-&trans  &trans  &trans  &kp RS(PIPE)      &kp AT                                                         &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp DOLLAR    &kp PERCENT
-&trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &mt RIGHT_CONTROL AMPERSAND  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE     &mt RIGHT_SHIFT BACKSLASH
-&trans  &trans  &trans  &trans            &trans             &trans         &mt RIGHT_ALT LEFT_BRACE     &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &mt LEFT_WIN UNDER
-&to 0   &trans  &trans  &kp DELETE        &trans             &kp SPACE      &kp BACKSPACE                &trans                                                                       &lt 5 ESCAPE
+&trans  &trans  &trans  &kp PIPE          &kp AT                                         &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp DOLLAR    &kp PERCENT
+&trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &kp AMPERSAND   &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE     &kp BACKSLASH
+&trans  &trans  &trans  &trans            &trans             &trans      &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp LEFT_WIN
+&to 0   &trans  &trans  &trans            &trans             &trans      &kp BACKSPACE   &trans                                                                       &lt 5 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
