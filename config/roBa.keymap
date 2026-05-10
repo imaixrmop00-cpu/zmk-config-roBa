@@ -60,10 +60,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q    &kp W             &kp E       &kp R         &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
-&kp A      &kp S             &kp D       &kp F         &kp G      &lt 1 SPACE      &lt 1 EQUAL          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
-&kp Z      &mt LEFT_SHIFT X  &kp C       &kp V         &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
-&kp LCTRL  &kp LEFT_WIN      &kp DELETE  &kp CAPSLOCK  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
+&lt 6 Q  &kp W             &kp E       &kp R         &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
+&kp A    &kp S             &kp D       &kp F         &kp G      &lt 1 SPACE      &lt 1 SLASH          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
+&kp Z    &mt LEFT_SHIFT X  &kp C       &kp V         &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
+&to 7    &kp LEFT_WIN      &kp DELETE  &kp CAPSLOCK  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -80,10 +80,10 @@
 
         NUM {
             bindings = <
-&kp SEMICOLON   &kp COMMA        &kp PERIOD       &kp PAGE_UP  &kp UP_ARROW                                                 &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0           &kp RIGHT_SHIFT
-&kp A           &kp MINUS        &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW       &kp N0                  &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_SHIFT  &kp TAB
-&kp LEFT_SHIFT  &kp SLASH        &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW      &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_SHIFT  &kp LEFT_WIN
-&kp LEFT_SHIFT  &kp RIGHT_SHIFT  &kp RIGHT_SHIFT  &kp COMMA    &kp PERIOD      &kp ENTER            &kp BACKSPACE           &kp RIGHT_CONTROL                                               &lt 5 ENTER
+&kp SEMICOLON   &kp COMMA     &kp PERIOD       &kp PAGE_UP  &kp UP_ARROW                                                 &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0           &kp RIGHT_SHIFT
+&kp A           &kp MINUS     &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW       &kp N0                  &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_SHIFT  &kp TAB
+&kp LEFT_SHIFT  &kp SLASH     &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW      &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_SHIFT  &kp LEFT_WIN
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp RIGHT_SHIFT  &kp COMMA    &kp PERIOD      &kp ENTER            &kp BACKSPACE           &kp RIGHT_CONTROL                                               &lt 5 ENTER
             >;
         };
 
@@ -122,6 +122,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &to 0   &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        NS_ONISHI {
+            bindings = <
+&kp P             &kp Y         &kp R       &kp W     &kp F                                         &kp MINUS  &kp U           &kp V      &kp C      &kp X
+&kp H             &kp S         &kp N       &kp T     &kp K   &lt 1 SPACE      &lt 1 SLASH          &kp O      &kp A           &kp I      &kp E      &mt RIGHT_SHIFT TAB
+&kp B             &kp J         &kp M       &kp D     &kp G   &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp Z      &mt LEFT_WIN Q  &mkp LCLK  &mkp RCLK  &to 0
+&mt LEFT_SHIFT L  &kp LEFT_WIN  &kp DELETE  &kp CAPS  &trans  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RCTRL                                        &lt 5 ENTER
             >;
         };
     };
