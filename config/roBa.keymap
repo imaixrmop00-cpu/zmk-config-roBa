@@ -127,9 +127,9 @@
 
         NS_ONISHI {
             bindings = <
-&kp P             &kp Y         &kp R       &kp W     &kp F                                         &kp MINUS  &kp U           &kp V      &kp C      &kp X
+&kp F             &kp J         &kp R       &kp W     &kp Y                                         &kp X      &kp U           &kp V      &kp C      &kp P
 &kp H             &kp S         &kp N       &kp T     &kp K   &lt 1 SPACE      &lt 1 SLASH          &kp O      &kp A           &kp I      &kp E      &mt RIGHT_SHIFT TAB
-&kp B             &kp J         &kp M       &kp D     &kp G   &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp Z      &mt LEFT_WIN Q  &mkp LCLK  &mkp RCLK  &to 0
+&kp B             &kp Z         &kp M       &kp D     &kp G   &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp MINUS  &mt LEFT_WIN Q  &mkp LCLK  &mkp RCLK  &to 0
 &mt LEFT_SHIFT L  &kp LEFT_WIN  &kp DELETE  &kp CAPS  &trans  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RCTRL                                        &lt 5 ENTER
             >;
         };
