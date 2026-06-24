@@ -60,10 +60,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W             &kp E       &kp R         &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
-&kp A             &kp S             &kp D       &kp F         &kp G      &lt 1 SPACE      &lt 1 SLASH          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
-&kp Z             &mt LEFT_SHIFT X  &kp C       &kp V         &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
-&kp LEFT_CONTROL  &kp LEFT_WIN      &kp DELETE  &kp CAPSLOCK  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
+&lt 6 Q  &kp W             &kp E       &kp R         &kp T                                            &kp Y              &kp U  &kp I      &kp O              &kp P
+&kp A    &kp S             &kp D       &kp F         &kp G      &lt 1 SPACE      &lt 1 SLASH          &kp H              &kp J  &kp K      &mt RIGHT_SHIFT L  &kp TAB
+&kp Z    &mt LEFT_SHIFT X  &kp C       &kp V         &kp B      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp N              &kp M  &mkp LCLK  &mkp RCLK          &kp LEFT_WIN
+&to 7    &kp LEFT_WIN      &kp DELETE  &kp CAPSLOCK  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                       &lt 5 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -71,19 +71,19 @@
 
         FUNCTION {
             bindings = <
-&kp C_BRIGHTNESS_INC  &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp PAGE_UP  &kp UP_ARROW                                           &kp F1             &kp F2   &kp F3   &kp RIGHT_SHIFT  &kp RIGHT_SHIFT
-&kp C_BRIGHTNESS_DEC  &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW       &kp F4            &kp F5             &kp F6   &kp F7   &kp RIGHT_SHIFT  &kp TAB
-&kp C_VOLUME_UP       &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW      &mt RIGHT_ALT F8  &kp F9             &kp F10  &kp F11  &kp RIGHT_SHIFT  &kp RIGHT_SHIFT
-&kp C_VOLUME_DOWN     &kp LEFT_SHIFT  &kp PRINTSCREEN  &kp INS      &kp SCROLLLOCK  &kp ESCAPE           &kp F12           &kp RIGHT_CONTROL                                     &kp ENTER
+&kp C_BRIGHTNESS_INC  &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp LEFT_SHIFT  &kp LEFT_SHIFT                                        &kp F1             &kp F2   &kp F3   &kp RIGHT_SHIFT  &kp RIGHT_SHIFT
+&kp C_BRIGHTNESS_DEC  &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LEFT_SHIFT      &kp F4            &kp F5             &kp F6   &kp F7   &kp RIGHT_SHIFT  &kp TAB
+&kp C_VOLUME_UP       &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LEFT_SHIFT      &mt RIGHT_ALT F8  &kp F9             &kp F10  &kp F11  &kp RIGHT_SHIFT  &kp RIGHT_SHIFT
+&kp C_VOLUME_DOWN     &kp LEFT_SHIFT  &kp PRINTSCREEN  &kp INS         &kp SCROLLLOCK  &kp ESCAPE          &kp F12           &kp RIGHT_CONTROL                                     &kp ENTER
             >;
         };
 
         NUM {
             bindings = <
-&kp SEMICOLON   &kp COMMA     &kp PERIOD       &kp PAGE_UP  &kp UP_ARROW                                                 &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0           &kp RIGHT_SHIFT
-&kp A           &kp MINUS     &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW       &kp N0                  &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_SHIFT  &kp TAB
-&kp LEFT_SHIFT  &kp SLASH     &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW      &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_SHIFT  &kp LEFT_WIN
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp RIGHT_SHIFT  &kp COMMA    &kp PERIOD      &kp ENTER            &kp BACKSPACE           &kp RIGHT_CONTROL                                               &kp ENTER
+&kp SEMICOLON   &kp COMMA       &kp PERIOD       &kp PAGE_UP  &kp UP_ARROW                                                 &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0           &kp RIGHT_SHIFT
+&kp A           &kp MINUS       &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW       &kp N0                  &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_SHIFT  &kp TAB
+&kp LEFT_SHIFT  &kp SLASH       &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW      &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_SHIFT  &kp LEFT_WIN
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &kp COMMA    &kp PERIOD      &kp ENTER            &kp BACKSPACE           &kp RIGHT_CONTROL                                               &kp ENTER
             >;
         };
 
@@ -127,10 +127,10 @@
 
         NS_ONISHI {
             bindings = <
-&kp F             &kp J         &kp R       &kp W     &kp Y                                         &kp X      &kp U           &kp V      &kp C      &kp P
-&kp H             &kp S         &kp N       &kp T     &kp K   &lt 1 SPACE      &lt 1 SLASH          &kp O      &kp A           &kp I      &kp E      &mt RIGHT_SHIFT TAB
-&kp B             &kp Z         &kp M       &kp D     &kp G   &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp MINUS  &mt LEFT_WIN Q  &mkp LCLK  &mkp RCLK  &to 0
-&mt LEFT_SHIFT L  &kp LEFT_WIN  &kp DELETE  &kp CAPS  &trans  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RCTRL                                        &lt 5 ENTER
+&kp F             &kp J           &kp R       &kp W     &kp Y                                            &kp X      &kp U              &kp V      &kp C      &kp P
+&kp H             &kp S           &kp N       &kp T     &kp K      &lt 1 SPACE      &lt 1 SLASH          &kp O      &kp A              &kp I      &kp E      &kp TAB
+&kp B             &kp Z           &kp M       &kp D     &kp G      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp L      &mt RIGHT_SHIFT Q  &mkp LCLK  &mkp RCLK  &to 0
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp DELETE  &kp CAPS  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RCTRL                                           &lt 5 ENTER
             >;
         };
     };
