@@ -26,14 +26,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -60,10 +53,10 @@
 
         default_layer {
             bindings = <
-&kp F             &kp Y   &kp R             &kp W       &kp J                                            &kp X              &kp U      &kp C      &kp P              &trans
-&kp H             &kp S   &kp N             &kp T       &kp K      &lt 1 SPACE      &lt 1 SLASH          &kp O              &kp A      &kp I      &kp E              &kp TAB
-&kp B             &kp Z   &kp M             &kp D       &kp G      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp V              &mkp RCLK  &mkp LCLK  &mt RIGHT_SHIFT Q  &kp LEFT_WIN
-&mt LCTRL DELETE  &trans  &mt LEFT_SHIFT L  &lt 6 CAPS  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                           &lt 5 ENTER
+&kp F                    &kp Y         &kp R           &kp W       &kp J                                            &kp X              &kp U      &kp C      &kp L              &kp P
+&kp H                    &kp S         &kp N           &kp T       &kp K      &lt 1 SPACE      &lt 1 SLASH          &kp O              &kp A      &kp I      &kp E              &kp TAB
+&kp B                    &kp Z         &kp M           &kp D       &kp G      &lt 3 TAB        &mt RIGHT_ALT EQUAL  &kp V              &mkp RCLK  &mkp LCLK  &mt RIGHT_SHIFT Q  &kp LEFT_WIN
+&mt LEFT_CONTROL DELETE  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 6 CAPS  &kp MINUS  &lt 2 ENTER      &lt 2 BACKSPACE      &kp RIGHT_CONTROL                                           &lt 5 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -83,7 +76,7 @@
 &kp SEMICOLON   &kp COMMA       &kp PERIOD       &kp PAGE_UP  &kp UP_ARROW                                                 &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp N0           &kp RIGHT_SHIFT
 &kp A           &kp MINUS       &kp KP_PLUS      &kp HOME     &kp PAGE_DOWN   &kp DOWN_ARROW       &kp N0                  &kp NUMBER_4       &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_SHIFT  &kp TAB
 &kp LEFT_SHIFT  &kp SLASH       &kp KP_ASTERISK  &kp END      &kp LEFT_ARROW  &kp RIGHT_ARROW      &mt RIGHT_ALT NUMBER_0  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_SHIFT  &kp LEFT_WIN
-&kp DELETE      &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &kp COMMA    &kp PERIOD      &kp ENTER            &kp BACKSPACE           &kp RIGHT_CONTROL                                               &kp ENTER
+&kp DELETE      &kp LEFT_SHIFT  &kp LEFT_SHIFT   &kp COMMA    &kp PERIOD      &kp ENTER            &kp BACKSPACE           &kp RIGHT_CONTROL                                               &kp ENTER
             >;
         };
 
